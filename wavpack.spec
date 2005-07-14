@@ -1,5 +1,5 @@
 Summary:	Open audio compression codec
-Summary(pl):	Otwarty kodek kompresji d¼wikêku
+Summary(pl):	Otwarty kodek kompresji d¼wiêku
 Name:		wavpack
 Version:	4.2
 Release:	1
