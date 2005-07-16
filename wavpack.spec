@@ -7,7 +7,7 @@ License:	other
 Group:		Libraries
 Source0:	http://www.wavpack.com/%{name}-%{version}.tar.bz2
 # Source0-md5:	2e740b2e36833e78a227913cf0efc3b6
-URL:		http://www.wavpack.com
+URL:		http://www.wavpack.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -37,8 +37,30 @@ the lossy file) provides full lossless restoration. For some users
 this means never having to choose between lossless and lossy
 compression!
 
-#%description -l pl
-#write me
+%description -l pl
+WavPack to ca³kowicie otwarty format kompresji d¼wiêku dostarczaj±cy
+tryby kompresji: bezstratny, stratny wysokiej jako¶ci oraz unikalny
+hybrydowy.
+
+Chocia¿ technologia jest lu¼no oparta na poprzednich wersjach
+WavPacka, format nowej wersji 4 zosta³ zaprojektowany od nowa, aby
+zaoferowaæ niezrównan± wydajno¶æ i funkcjonalno¶æ. W domy¶lnym trybie
+bezstratnym WavPack zachowuje siê tak jak kompresor WinZip dla plików
+d¼wiêkowych. Jednak w przeciwieñstwie do kodowañ MP3 czy WMA, które
+wp³ywaj± na jako¶æ d¼wiêku, ¿aden bit oryginalnej informacji nie jest
+tracony, wiêc nie ma ¿adnych szans na degradacjê. Czyni to tryb
+bezstratny idealnym do archiwizowania materia³ów d¼wiêkowych oraz w
+innych sytuacjach, gdzie jako¶æ jest najwa¿niejsza. Wspó³czynnik
+kompresji zale¿y od materia³u ¼ród³owego, ale zwykle jest pomiêdzy
+30% a 70%.
+
+Tryb hybrydowy udostêpnia wszystkie zalety kompresji bezstratnej z
+dodatkowym ulepszeniem. Zamiast tworzenia pojedynczego pliku tryb ten
+tworzy zarówno stosunkowo ma³y, wysokiej jako¶ci plik stratny, który
+mo¿e byæ u¿ywany jako taki oraz plik "poprawek", który (w po³±czeniu z
+plikiem stratnym) odtwarza pe³n± jako¶æ bez strat. Dla niektórych
+u¿ytkowników oznacza to, ¿e nie musz± wybieraæ pomiêdzy kompresj±
+bezstratn± a stratn±.
 
 %package libs
 Summary:	Wavpack library
