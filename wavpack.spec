@@ -1,12 +1,12 @@
 Summary:	Open audio compression codec
 Summary(pl):	Otwarty kodek kompresji d¼wiêku
 Name:		wavpack
-Version:	4.2
-Release:	2
+Version:	4.32
+Release:	3
 License:	other
 Group:		Libraries
 Source0:	http://www.wavpack.com/%{name}-%{version}.tar.bz2
-# Source0-md5:	2e740b2e36833e78a227913cf0efc3b6
+# Source0-md5:	e40ff238477c0007155bce4ada3f7eba
 URL:		http://www.wavpack.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
