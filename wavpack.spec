@@ -1,5 +1,5 @@
 Summary:	Open audio compression codec
-Summary(pl):	Otwarty kodek kompresji d¼wiêku
+Summary(pl.UTF-8):   Otwarty kodek kompresji dÅºwiÄ™ku
 Name:		wavpack
 Version:	4.40.0
 Release:	1
@@ -37,65 +37,65 @@ the lossy file) provides full lossless restoration. For some users
 this means never having to choose between lossless and lossy
 compression!
 
-%description -l pl
-WavPack to ca³kowicie otwarty format kompresji d¼wiêku dostarczaj±cy
-tryby kompresji: bezstratny, stratny wysokiej jako¶ci oraz unikalny
+%description -l pl.UTF-8
+WavPack to caÅ‚kowicie otwarty format kompresji dÅºwiÄ™ku dostarczajÄ…cy
+tryby kompresji: bezstratny, stratny wysokiej jakoÅ›ci oraz unikalny
 hybrydowy.
 
-Chocia¿ technologia jest lu¼no oparta na poprzednich wersjach
-WavPacka, format nowej wersji 4 zosta³ zaprojektowany od nowa, aby
-zaoferowaæ niezrównan± wydajno¶æ i funkcjonalno¶æ. W domy¶lnym trybie
-bezstratnym WavPack zachowuje siê tak jak kompresor WinZip dla plików
-d¼wiêkowych. Jednak w przeciwieñstwie do kodowañ MP3 czy WMA, które
-wp³ywaj± na jako¶æ d¼wiêku, ¿aden bit oryginalnej informacji nie jest
-tracony, wiêc nie ma ¿adnych szans na degradacjê. Czyni to tryb
-bezstratny idealnym do archiwizowania materia³ów d¼wiêkowych oraz w
-innych sytuacjach, gdzie jako¶æ jest najwa¿niejsza. Wspó³czynnik
-kompresji zale¿y od materia³u ¼ród³owego, ale zwykle jest pomiêdzy
+ChociaÅ¼ technologia jest luÅºno oparta na poprzednich wersjach
+WavPacka, format nowej wersji 4 zostaÅ‚ zaprojektowany od nowa, aby
+zaoferowaÄ‡ niezrÃ³wnanÄ… wydajnoÅ›Ä‡ i funkcjonalnoÅ›Ä‡. W domyÅ›lnym trybie
+bezstratnym WavPack zachowuje siÄ™ tak jak kompresor WinZip dla plikÃ³w
+dÅºwiÄ™kowych. Jednak w przeciwieÅ„stwie do kodowaÅ„ MP3 czy WMA, ktÃ³re
+wpÅ‚ywajÄ… na jakoÅ›Ä‡ dÅºwiÄ™ku, Å¼aden bit oryginalnej informacji nie jest
+tracony, wiÄ™c nie ma Å¼adnych szans na degradacjÄ™. Czyni to tryb
+bezstratny idealnym do archiwizowania materiaÅ‚Ã³w dÅºwiÄ™kowych oraz w
+innych sytuacjach, gdzie jakoÅ›Ä‡ jest najwaÅ¼niejsza. WspÃ³Å‚czynnik
+kompresji zaleÅ¼y od materiaÅ‚u ÅºrÃ³dÅ‚owego, ale zwykle jest pomiÄ™dzy
 30% a 70%.
 
-Tryb hybrydowy udostêpnia wszystkie zalety kompresji bezstratnej z
+Tryb hybrydowy udostÄ™pnia wszystkie zalety kompresji bezstratnej z
 dodatkowym ulepszeniem. Zamiast tworzenia pojedynczego pliku tryb ten
-tworzy zarówno stosunkowo ma³y, wysokiej jako¶ci plik stratny, który
-mo¿e byæ u¿ywany jako taki oraz plik "poprawek", który (w po³±czeniu z
-plikiem stratnym) odtwarza pe³n± jako¶æ bez strat. Dla niektórych
-u¿ytkowników oznacza to, ¿e nie musz± wybieraæ pomiêdzy kompresj±
-bezstratn± a stratn±.
+tworzy zarÃ³wno stosunkowo maÅ‚y, wysokiej jakoÅ›ci plik stratny, ktÃ³ry
+moÅ¼e byÄ‡ uÅ¼ywany jako taki oraz plik "poprawek", ktÃ³ry (w poÅ‚Ä…czeniu z
+plikiem stratnym) odtwarza peÅ‚nÄ… jakoÅ›Ä‡ bez strat. Dla niektÃ³rych
+uÅ¼ytkownikÃ³w oznacza to, Å¼e nie muszÄ… wybieraÄ‡ pomiÄ™dzy kompresjÄ…
+bezstratnÄ… a stratnÄ….
 
 %package libs
 Summary:	Wavpack library
-Summary(pl):	Biblioteka Wavpack
+Summary(pl.UTF-8):   Biblioteka Wavpack
 Group:		Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 
 %description libs
 Wavpack library.
 
-%description libs -l pl
+%description libs -l pl.UTF-8
 Biblioteka Wavpack.
 
 %package devel
 Summary:	Header files for Wavpack
-Summary(pl):	Pliki nag³ówkowe Wavpack
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe Wavpack
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 
 %description devel
 Header files for Wavpack.
 
-%description devel -l pl
-Pliki nag³ówkowe biblioteki Wavpack.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe biblioteki Wavpack.
 
 %package static
 Summary:	Static Wavpack library
-Summary(pl):	Statyczna biblioteka Wavpack
+Summary(pl.UTF-8):   Statyczna biblioteka Wavpack
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static Wavpack library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka Wavpack.
 
 %prep
