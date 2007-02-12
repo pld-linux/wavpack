@@ -1,5 +1,5 @@
 Summary:	Open audio compression codec
-Summary(pl.UTF-8):   Otwarty kodek kompresji dźwięku
+Summary(pl.UTF-8):	Otwarty kodek kompresji dźwięku
 Name:		wavpack
 Version:	4.40.0
 Release:	1
@@ -64,7 +64,7 @@ bezstratną a stratną.
 
 %package libs
 Summary:	Wavpack library
-Summary(pl.UTF-8):   Biblioteka Wavpack
+Summary(pl.UTF-8):	Biblioteka Wavpack
 Group:		Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 
@@ -76,7 +76,7 @@ Biblioteka Wavpack.
 
 %package devel
 Summary:	Header files for Wavpack
-Summary(pl.UTF-8):   Pliki nagłówkowe Wavpack
+Summary(pl.UTF-8):	Pliki nagłówkowe Wavpack
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 
@@ -88,7 +88,7 @@ Pliki nagłówkowe biblioteki Wavpack.
 
 %package static
 Summary:	Static Wavpack library
-Summary(pl.UTF-8):   Statyczna biblioteka Wavpack
+Summary(pl.UTF-8):	Statyczna biblioteka Wavpack
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
