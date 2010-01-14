@@ -1,12 +1,12 @@
 Summary:	Open audio compression codec
 Summary(pl.UTF-8):	Otwarty kodek kompresji dźwięku
 Name:		wavpack
-Version:	4.41.0
-Release:	2
-License:	other
+Version:	4.60.1
+Release:	1
+License:	BSD
 Group:		Libraries
 Source0:	http://www.wavpack.com/%{name}-%{version}.tar.bz2
-# Source0-md5:	6a13edeae437498db78fe528d9e95144
+# Source0-md5:	7bb1528f910e4d0003426c02db856063
 URL:		http://www.wavpack.com/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -124,19 +124,26 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README license.txt
-%attr(755,root,root) %{_bindir}/*
+%attr(755,root,root) %{_bindir}/wavpack
+%attr(755,root,root) %{_bindir}/wvgain
+%attr(755,root,root) %{_bindir}/wvunpack
+%{_mandir}/man1/wavpack.1*
+%{_mandir}/man1/wvgain.1*
+%{_mandir}/man1/wvunpack.1*
 
 %files libs
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so.*.*.*
+%attr(755,root,root) %{_libdir}/libwavpack.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libwavpack.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/lib*.so
-%{_libdir}/lib*.la
+%doc doc/{file_format,library_use}.txt
+%attr(755,root,root) %{_libdir}/libwavpack.so
+%{_libdir}/libwavpack.la
 %{_includedir}/wavpack
-%{_pkgconfigdir}/*.pc
+%{_pkgconfigdir}/wavpack.pc
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/lib*.a
+%{_libdir}/libwavpack.a
