@@ -2,7 +2,7 @@ Summary:	Open audio compression codec
 Summary(pl.UTF-8):	Otwarty kodek kompresji dźwięku
 Name:		wavpack
 Version:	4.60.1
-Release:	1
+Release:	2
 License:	BSD
 Group:		Libraries
 Source0:	http://www.wavpack.com/%{name}-%{version}.tar.bz2
