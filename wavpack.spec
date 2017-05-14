@@ -1,13 +1,13 @@
 Summary:	Open audio compression codec
 Summary(pl.UTF-8):	Otwarty kodek kompresji dźwięku
 Name:		wavpack
-Version:	4.80.0
+Version:	5.1.0
 Release:	1
 License:	BSD
 Group:		Libraries
 #Source0Download: http://www.wavpack.com/downloads.html
 Source0:	http://www.wavpack.com/%{name}-%{version}.tar.bz2
-# Source0-md5:	0f2f1184813dce1caf51b52af615ec17
+# Source0-md5:	7f06272651f0c2292c1d0ba353386782
 URL:		http://www.wavpack.com/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -110,7 +110,8 @@ Statyczna biblioteka Wavpack.
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	--enable-legacy
 %{__make}
 
 %install
@@ -129,9 +130,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/wavpack
 %attr(755,root,root) %{_bindir}/wvgain
+%attr(755,root,root) %{_bindir}/wvtag
 %attr(755,root,root) %{_bindir}/wvunpack
 %{_mandir}/man1/wavpack.1*
 %{_mandir}/man1/wvgain.1*
+%{_mandir}/man1/wvtag.1*
 %{_mandir}/man1/wvunpack.1*
 
 %files libs
@@ -142,7 +145,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc doc/{file_format,library_use}.txt
+%doc doc/{WavPack*.pdf,wavpack_doc.html,style.css}
 %attr(755,root,root) %{_libdir}/libwavpack.so
 %{_libdir}/libwavpack.la
 %{_includedir}/wavpack
