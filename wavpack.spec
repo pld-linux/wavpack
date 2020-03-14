@@ -1,13 +1,13 @@
 Summary:	Open audio compression codec
 Summary(pl.UTF-8):	Otwarty kodek kompresji dźwięku
 Name:		wavpack
-Version:	5.1.0
+Version:	5.2.0
 Release:	1
 License:	BSD
 Group:		Libraries
 #Source0Download: http://www.wavpack.com/downloads.html
-Source0:	http://www.wavpack.com/%{name}-%{version}.tar.bz2
-# Source0-md5:	7f06272651f0c2292c1d0ba353386782
+Source0:	http://www.wavpack.com/%{name}-%{version}.tar.xz
+# Source0-md5:	0390530d998f080ef09dcf0b5dd503e0
 URL:		http://www.wavpack.com/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
@@ -15,6 +15,8 @@ BuildRequires:	docbook-dtd412-xml
 BuildRequires:	docbook-style-xsl
 BuildRequires:	libtool
 BuildRequires:	libxslt-progs
+BuildRequires:	tar >= 1:1.22
+BuildRequires:	xz
 Requires:	%{name}-libs = %{version}-%{release}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -139,7 +141,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files libs
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING ChangeLog README
+%doc AUTHORS COPYING ChangeLog README.md
 %attr(755,root,root) %{_libdir}/libwavpack.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libwavpack.so.1
 
