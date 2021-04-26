@@ -1,13 +1,13 @@
 Summary:	Open audio compression codec
 Summary(pl.UTF-8):	Otwarty kodek kompresji dźwięku
 Name:		wavpack
-Version:	5.3.0
+Version:	5.4.0
 Release:	1
 License:	BSD
 Group:		Libraries
 #Source0Download: http://www.wavpack.com/downloads.html
 Source0:	http://www.wavpack.com/%{name}-%{version}.tar.xz
-# Source0-md5:	18e524a9af1526afd13a39406dae9c8e
+# Source0-md5:	d21570637fe5d5cee06039707c2d9d6e
 URL:		http://www.wavpack.com/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake
