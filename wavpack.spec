@@ -1,20 +1,25 @@
+#
+# Conditional build:
+%bcond_without	static_libs
+
 Summary:	Open audio compression codec
 Summary(pl.UTF-8):	Otwarty kodek kompresji dźwięku
 Name:		wavpack
-Version:	5.4.0
+Version:	5.5.0
 Release:	1
 License:	BSD
 Group:		Libraries
-#Source0Download: http://www.wavpack.com/downloads.html
-Source0:	http://www.wavpack.com/%{name}-%{version}.tar.xz
-# Source0-md5:	d21570637fe5d5cee06039707c2d9d6e
-URL:		http://www.wavpack.com/
+#Source0Download: https://www.wavpack.com/downloads.html
+Source0:	https://www.wavpack.com/%{name}-%{version}.tar.xz
+# Source0-md5:	9501de7a8ac23649b06f4e470d5ff299
+URL:		https://www.wavpack.com/
 BuildRequires:	autoconf >= 2.50
-BuildRequires:	automake
+BuildRequires:	automake >= 1:1.15
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	docbook-style-xsl
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:2
 BuildRequires:	libxslt-progs
+BuildRequires:	rpm-build >= 4.6
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Requires:	%{name}-libs = %{version}-%{release}
@@ -104,6 +109,18 @@ Static Wavpack library.
 %description static -l pl.UTF-8
 Statyczna biblioteka Wavpack.
 
+%package apidocs
+Summary:	API documentation for Wavpack library
+Summary(pl.UTF-8):	Dokumentacja API biblioteki Wavpack
+Group:		Documentation
+BuildArch:	noarch
+
+%description apidocs
+API documentation for Wavpack library.
+
+%description apidocs -l pl.UTF-8
+Dokumentacja API biblioteki Wavpack.
+
 %prep
 %setup -q
 
@@ -113,7 +130,8 @@ Statyczna biblioteka Wavpack.
 %{__autoconf}
 %{__automake}
 %configure \
-	--enable-legacy
+	--enable-legacy \
+	%{?with_static_libs:--enable-static}
 %{__make}
 
 %install
@@ -121,6 +139,9 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+# packaged as %doc
+%{__rm} -r $RPM_BUILD_ROOT%{_docdir}/wavpack
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -147,12 +168,17 @@ rm -rf $RPM_BUILD_ROOT
 
 %files devel
 %defattr(644,root,root,755)
-%doc doc/{WavPack*.pdf,wavpack_doc.html,style.css}
 %attr(755,root,root) %{_libdir}/libwavpack.so
 %{_libdir}/libwavpack.la
 %{_includedir}/wavpack
 %{_pkgconfigdir}/wavpack.pc
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libwavpack.a
+%endif
+
+%files apidocs
+%defattr(644,root,root,755)
+%doc doc/{WavPack*.pdf,wavpack_doc.html,style.css}
