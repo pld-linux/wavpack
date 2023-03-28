@@ -17,6 +17,7 @@ BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.15
 BuildRequires:	docbook-dtd412-xml
 BuildRequires:	docbook-style-xsl
+BuildRequires:	gettext-tools
 BuildRequires:	libtool >= 2:2
 BuildRequires:	libxslt-progs
 BuildRequires:	rpm-build >= 4.6
