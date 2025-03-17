@@ -1,17 +1,17 @@
 #
 # Conditional build:
-%bcond_without	static_libs
+%bcond_without	static_libs	# static library
 
 Summary:	Open audio compression codec
 Summary(pl.UTF-8):	Otwarty kodek kompresji dźwięku
 Name:		wavpack
-Version:	5.8.0
+Version:	5.8.1
 Release:	1
 License:	BSD
 Group:		Libraries
 #Source0Download: https://www.wavpack.com/downloads.html
 Source0:	https://www.wavpack.com/%{name}-%{version}.tar.xz
-# Source0-md5:	8d3aaabcec92f2a83d9e775f8cb63563
+# Source0-md5:	ff40072de82dd299fc45161bc46b8566
 URL:		https://www.wavpack.com/
 BuildRequires:	autoconf >= 2.50
 BuildRequires:	automake >= 1:1.15
